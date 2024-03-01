@@ -35,7 +35,7 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.css"
+              "src/app/components/new-note-card/new-note-card.component.css"
             ],
             "scripts": []
           },
@@ -94,7 +94,8 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.css"
+              "src/app/components/new-note-card/new-note-card.component.css",
+              "node_modules/@fortawesome/fontawesome-free/css/all.css"
             ],
             "scripts": []
           }

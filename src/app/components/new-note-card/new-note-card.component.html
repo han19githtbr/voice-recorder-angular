@@ -1,0 +1,30 @@
+<div class="new-note-card">
+  <button (click)="toggleRecording()" [ngClass]="{ 'recording': isRecording }">{{ isRecording ? 'Parar Gravação' : 'Iniciar Gravação' }}</button>
+  <button (click)="clearContent()">Limpar Conteúdo</button>
+  <div id="timer">{{ formatTime(timerValue) }}</div>
+  <textarea [(ngModel)]="content" placeholder="Grave uma nota em áudio"></textarea>
+  <button (click)="saveContent()">Salvar</button>
+  <div *ngIf="savedContents.length > 0" class="saved-content">
+    <h3>Conteúdo Salvo:</h3>
+    <div *ngFor="let savedContent of savedContents" class="saved-item">
+      <div>{{ savedContent }}</div>
+      <button class="delete-button" (click)="deleteContent(savedContent)">Apagar</button>
+    </div>
+  </div>
+  <div class="language-select-container">
+    <select [(ngModel)]="selectedLanguage">
+      <option value="fr-FR">Francês</option>
+      <option value="pt-BR">Português (Brasil)</option>
+      <!-- Adicione mais opções de idiomas aqui, se necessário -->
+    </select>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
